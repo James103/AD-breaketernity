@@ -85,7 +85,7 @@ export const progressStages = [
     ),
     // Tracks up to e8000 even though many players will reality well before that; we still want to distinguish
     // which saves are farther all the way up to the zeroth-reality RM cap
-    subProgressValue: save => Math.clampMax(Math.sqrt((new Decimal(save.eternityPoints).log10() - 1300) / 6700), 1),
+    subProgressValue: save => Math.clampMax(Math.sqrt((new Decimal(save.eternityPoints).log10().toNumber() - 1300) / 6700), 1),
   },
   {
     id: PROGRESS_STAGE.EARLY_REALITY,
